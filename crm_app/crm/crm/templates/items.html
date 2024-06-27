@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Items
+{% endblock %}
+
+{% block content %}
+    <div class="photo-grid">
+        {% for item in items %}
+            <div class="photo-grid-item">
+                <picture>
+                    <img src="{{ item.photo.url }}" alt="{{ item.title }}">
+                </picture>
+                <div class="content">
+                    <h3><a href="{{ item.get_absolute_url }}">{{ item.title }} {{ item.article }}</a></h3>
+                    <p>{{ item.price_rrp }} грн.</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

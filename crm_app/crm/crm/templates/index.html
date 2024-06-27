@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block content %}
+    <!-- Баннер -->
+    <div class="banner">
+        <img src="{% static 'images/pic07.jpeg' %}" alt="Banner" class="banner-img">
+        <div class="banner-text">
+
+            <p>The best tool for managing your sales and marketing.</p>
+        </div>
+    </div>
+
+    <!-- Описание -->
+    <section class="description">
+        <div class="inner">
+            <h2>About Our Product</h2>
+            <p>
+				Novella CRM helps you efficiently manage customer interactions and optimize business processes.
+				Our features include contact management, marketing automation, sales analysis, and much more.
+			</p>
+        </div>
+    </section>
+
+{% endblock %}
